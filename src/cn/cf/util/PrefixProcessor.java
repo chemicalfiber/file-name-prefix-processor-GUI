@@ -16,7 +16,6 @@ public class PrefixProcessor {
             String originName = file.getName();
             // 建立新的文件名，因为Downie会添加「 - xxx - 」作为中间修饰，所以要往后多切割
             String newName = originName.substring(length + 9);
-//            System.out.println(newName);
             file.renameTo(new File(folderPath + File.separator + newName));   // 别忘记添加「File.separator」，否则会将被处理的文件移动到上级目录，并在文件名中增加原来目录的名字作为前缀
         }
         return true;
